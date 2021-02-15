@@ -14,7 +14,7 @@ export default class Animation{
     addEventListeners(){
 
         selectors.playBtn.addEventListener('click', ()=>{
-            if (this._tl.paused()) {
+            if(this._tl.paused()) {
                 this._tl.play();
             } else {
                 this._tl.restart();
@@ -22,7 +22,7 @@ export default class Animation{
         });
 
         selectors.truckBtn.addEventListener('click', ()=>{
-            if (this._tl.paused()) {
+            if(this._tl.paused()) {
                 this._tl.play();
             } else {
                 this._tl.restart();
@@ -39,6 +39,7 @@ export default class Animation{
     }
 
     createAnimation(){
+        
         return this._tl
        
         .to(selectors.list, {id:'listUp', y:'-=100', ease: 'back.in'})
